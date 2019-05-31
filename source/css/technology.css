@@ -14,8 +14,12 @@
 .technology-body {
   width: 100%;
   height: 100%;
-  background: url(/images/background.jpg) no-repeat;
-  background-size: cover;
+  position: absolute;
+  overflow: hidden;
+}
+#canvas {
+  width: 100%;
+  height: 100%;
   position: absolute;
   overflow: hidden;
 }
@@ -61,12 +65,11 @@
 /* 动态圈 */
 .technology-circle {
   position: absolute;
-  top: calc(50% - 325px);
-  left: calc(50% - 325px);
-  width: 650px;
-  height: 650px;
+  top: calc(50% - 500px);
+  left: calc(50% - 500px);
+  width: 1000px;
+  height: 1000px;
   border-radius: 50%;
-  opacity: 0.6;
   z-index: 1; 
 }
 .technology-circle .wrap {
@@ -95,8 +98,8 @@
   top: 0;
   right: 0;
   margin: auto;
-  width: 470px;
-  height: 470px;
+  width: 820px;
+  height: 820px;
   animation: technology-middle-circle_rotate 30s linear 0s infinite;
 }
 .technology-circle .wrap .inner::after {
@@ -107,8 +110,11 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 75%;
+  height: 75%;
   animation: technology-middle-circle-2_rotate 30s linear 0s infinite;
 }
 .technology-circle .wrap .inner::before {
@@ -239,19 +245,19 @@
   animation: technology__scale-nav 0.3s ease 1.4s forwards, technology__rotate-nav-1 5s ease 1.7s infinite;
 }
 .technology-nav .nav-box section:nth-child(1) a:nth-child(1) {
-  animation: technology__show-nav-text 0.7s ease 2.2s forwards, bgc-gradient 5s ease 0s infinite;
+  animation: technology__show-nav-text 0.7s ease 2.2s forwards;
 }
 .technology-nav .nav-box section:nth-child(1) a:nth-child(2) {
-  animation: technology__show-nav-text 0.7s ease 2.5s forwards, bgc-gradient 5s ease 0s infinite;
+  animation: technology__show-nav-text 0.7s ease 2.5s forwards;
 }
 .technology-nav .nav-box section:nth-child(2) {
-  animation: technology__scale-nav 0.3s ease 1.4s forwards, technology__rotate-nav-2 5s ease 1.7s forwards, bgc-gradient 5s ease 0s infinite;
+  animation: technology__scale-nav 0.3s ease 1.4s forwards, technology__rotate-nav-2 5s ease 1.7s forwards;
 }
 .technology-nav .nav-box section:nth-child(2) a:nth-child(1) {
-  animation: technology__show-nav-text 0.7s ease 2.3s forwards, bgc-gradient 5s ease 0s infinite;
+  animation: technology__show-nav-text 0.7s ease 2.3s forwards;
 }
 .technology-nav .nav-box section:nth-child(2) a:nth-child(2) {
-  animation: technology__show-nav-text 0.7s ease 2.4s forwards, bgc-gradient 5s ease 0s infinite;
+  animation: technology__show-nav-text 0.7s ease 2.4s forwards;
 }
 .technology-nav .message {
   animation: technology__show-message 0.4s ease 1s forwards, technology__hidden-message 0.5s ease 2s forwards;
@@ -265,6 +271,15 @@
 .technology__share-btn {
   animation: slide-left 0.4s ease 3s forwards;
 }
+.technology-frame section:nth-child(2) {
+  transform: rotate(90deg);
+}
+.technology-frame section:nth-child(3) {
+  transform: rotate(-90deg);
+}
+.technology-frame section:nth-child(4) {
+  transform: rotate(180deg);
+}
 
 @media screen and (min-width: 961px) {
   .technology-frame section:nth-child(1) {
@@ -274,20 +289,16 @@
   .technology-frame section:nth-child(2) {
     top: 20px;
     right: 20px;
-    transform: rotate(90deg);
   }
   .technology-frame section:nth-child(3) {
     bottom: 20px;
     left: 20px;
-    transform: rotate(-90deg);
   }
   .technology-frame section:nth-child(4) {
     bottom: 20px;
     right: 20px;
-    transform: rotate(180deg);
   }
   .technology-circle .wrap {
-    transform: scale(1.54);
   }
   .technology-nav .nav-box {
     position: absolute;
@@ -331,8 +342,10 @@
     bottom: 10px;
     right: 10px;
   }
+  .technology-circle {
+    transform: scale(0.8);
+  }
   .technology-circle .wrap {
-    transform: scale(1.25);
   }
   .technology-circle .wrap .inner {
     transform: scale(1);
@@ -401,10 +414,10 @@
     transform: scale(1); }}
 @keyframes technology-circle_rotate  {
   from {
-    transform: rotate(0deg) scale(1.2);
+    transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg) scale(1.2);
+    transform: rotate(360deg);
   }
 }
 @keyframes technology-middle-circle_rotate  {
@@ -429,10 +442,10 @@
 }
 @keyframes technology-middle-circle-3_rotate  {
   from {
-    transform: rotate(-0deg) scale(0.3);
+    transform: rotate(-0deg) scale(0.32);
   }
   to {
-    transform: rotate(-360deg) scale(0.3);
+    transform: rotate(-360deg) scale(0.32);
   }
 }
 @keyframes technology-circle_rotate__sp  {
@@ -546,15 +559,3 @@
     transform: translateY(100%); }
   to {
     transform: translateY(0%); } }
-
-@keyframes bgc-gradient {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
