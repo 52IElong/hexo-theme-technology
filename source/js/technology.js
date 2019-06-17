@@ -167,8 +167,9 @@
 
   //宇宙特效
   "use strict";
-  var canvas = document.getElementById('canvas'),
-    ctx = canvas.getContext('2d'),
+  var canvas = document.getElementById('canvas');
+  if (!canvas) return;
+  var  ctx = canvas.getContext('2d'),
     w = canvas.width = window.innerWidth,
     h = canvas.height = window.innerHeight,
 
