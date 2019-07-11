@@ -1,11 +1,10 @@
 # technology
 
-technology is a mobile-enabled Hexo theme based on the features in Hexo's default theme landscape. Since I am a Designer and not a Coder, so please advise! I am very grateful to [youchen1992](https://github.com/youchen1992) for providing technical support during the technology production process.
+technology is a mobile-enabled Hexo theme based on the features in Hexo's default theme landscape. Since I am a Designer and not a Coder, so please advise! I am very grateful to [guxuelong](https://github.com/guxuelong) for providing technical support during the technology production process.
 
 
-[Preview](https://zhwangart.github.io)
+[Preview](https://www.madelove.top)
 
-[中文说明](https://zhwangart.github.io/2018/11/30/technology/)
 
 ![Screenshot](screenshots/hexo-theme-technology.jpg)
 
